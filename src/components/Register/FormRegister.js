@@ -1,6 +1,7 @@
 import React from 'react';
 import useForm from './useForm';
 import validate from './validate';
+import '../../scss/app.scss'
 
 const FormRegister = () => {
 
@@ -20,7 +21,7 @@ const FormRegister = () => {
                         value={values.name}
                         onChange={handleChange}
                     />
-                    {errors.name && <span>{errors.name}</span>}
+                    {errors.name && <span className='errors'>{errors.name}</span>}
                 </div>
 
                 <div className="form_input">
@@ -34,7 +35,7 @@ const FormRegister = () => {
                         value={values.surname}
                         onChange={handleChange}
                     />
-                    {errors.surname && <span>{errors.surname}</span>}
+                    {errors.surname && <span className='errors'>{errors.surname}</span>}
                 </div>
 
                 <div className="form_input">
@@ -48,7 +49,7 @@ const FormRegister = () => {
                         value={values.email}
                         onChange={handleChange}
                     />
-                    {errors.email && <span>{errors.email}</span>}
+                    {errors.email && <span className='errors'>{errors.email}</span>}
                 </div>
 
                 <div className="form_input">
@@ -62,7 +63,7 @@ const FormRegister = () => {
                         value={values.password}
                         onChange={handleChange}
                     />
-                    {errors.password && <span>{errors.password}</span>}
+                    {errors.password && <span className='errors'>{errors.password}</span>}
                 </div>
 
                 <div className="form_input">
@@ -76,13 +77,14 @@ const FormRegister = () => {
                         value={values.confirmPassword}
                         onChange={handleChange}
                     />
-                    {errors.confirmPassword && <span>{errors.confirmPassword}</span>}
+                    {errors.confirmPassword && <span className='errors'>{errors.confirmPassword}</span>}
                 </div>
 
                 <button type="submit" className="form_input_button">
                     Sign up
                 </button>
             </form>
+            
         </div>
     )
 }
